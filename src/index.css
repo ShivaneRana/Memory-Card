@@ -10,7 +10,7 @@
 }
 
 body {
-  width: 100%;
+  max-width: 100%;
   font-family:
     "MplusMedium", sans-serif, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
