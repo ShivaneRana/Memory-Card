@@ -7,12 +7,12 @@
   align-items: center;
 }
 
-.mainContainer > p{
-    cursor: default;
+.mainContainer > p {
+  cursor: default;
 }
 
-.mainContainer > p > span:hover{
-    cursor: pointer;
-    background-color: #FC702E;
-    text-decoration: underline;
+.mainContainer > p > span:hover {
+  cursor: pointer;
+  background-color: #fc702e;
+  text-decoration: underline;
 }

@@ -6,11 +6,16 @@ function Footer() {
   return (
     <div className={style.mainContainer}>
       <p>
-        {year.getFullYear()} © Odin Project Assignment by <span
-        title="Open github"
-        onClick={() => {
-          window.open("https://github.com/ShivaneRana","_blank")
-        }}>Shivane Rana</span>. All rights reserved.
+        {year.getFullYear()} © Odin Project Assignment by{" "}
+        <span
+          title="Open github"
+          onClick={() => {
+            window.open("https://github.com/ShivaneRana", "_blank");
+          }}
+        >
+          Shivane Rana
+        </span>
+        . All rights reserved.
       </p>
     </div>
   );
