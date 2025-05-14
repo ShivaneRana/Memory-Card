@@ -1,37 +1,37 @@
-.mainContainer{
-    min-width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 5px;
+.mainContainer {
+  min-width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
 }
 
-.mainContainer > h1{
-    letter-spacing: 0.25px;
-    cursor: pointer;
+.mainContainer > h1 {
+  letter-spacing: 0.25px;
+  cursor: pointer;
 }
 
-.buttonHolder{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+.buttonHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
-.buttonHolder > button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+.buttonHolder > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-.buttonHolder > button:hover{
-    background-color: #FC702E;
+.buttonHolder > button:hover {
+  background-color: #fc702e;
 }
 
-.buttonHolder > button > img{
-    height: 35px;
-    width: 35px;
+.buttonHolder > button > img {
+  height: 35px;
+  width: 35px;
 }
