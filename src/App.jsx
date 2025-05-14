@@ -10,31 +10,33 @@ function App() {
 }
 
 function MainContainer() {
-  const [sound,setSound] = useState(true);
-  const [currentScore,setCurrentScore] = useState(0);
-  const [topScore,setTopScore] = useState(0);
+  const [sound, setSound] = useState(true);
+  const [currentScore, setCurrentScore] = useState(0);
+  const [topScore, setTopScore] = useState(0);
 
-  function toggleSound(){
+  function toggleSound() {
     setSound(!sound);
   }
 
-  function updateCurrentScore(){
+  function updateCurrentScore() {
     setCurrentScore(currentScore + 1);
   }
 
-  function updateTopScore(){
+  function updateTopScore() {
     setTopScore(currentScore);
   }
 
   return (
-    <mainContext.Provider value={{
-      sound,
-      currentScore,
-      topScore,
-      toggleSound,
-      updateCurrentScore,
-      updateTopScore
-    }}>
+    <mainContext.Provider
+      value={{
+        sound,
+        currentScore,
+        topScore,
+        toggleSound,
+        updateCurrentScore,
+        updateTopScore,
+      }}
+    >
       <div className={style.mainContainer}>
         <Navbar></Navbar>
       </div>

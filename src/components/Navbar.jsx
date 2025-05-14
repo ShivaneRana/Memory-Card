@@ -14,23 +14,20 @@ function Navbar() {
       <h1>Memory Card</h1>
       <div className={style.buttonHolder}>
         <button
-        onClick={() => {
-          context.toggleSound();
-        }}
-        title={context.sound ? "Mute sound" : "Unmute sound"}>
-          <img src={context.sound ? nonMuteIcon : muteIcon} alt="toggling sound effect icon"></img>
+          onClick={() => {
+            context.toggleSound();
+          }}
+          title={context.sound ? "Mute sound" : "Unmute sound"}
+        >
+          <img
+            src={context.sound ? nonMuteIcon : muteIcon}
+            alt="toggling sound effect icon"
+          ></img>
         </button>
-        <button onClick={() => {
-
-        }}
-        title="Reset game">
+        <button onClick={() => {}} title="Reset game">
           <img src={resetIcon} alt="reset game icon"></img>
         </button>
-        <button
-        onClick={() => {
-
-        }}
-        title="Game information">
+        <button onClick={() => {}} title="Game information">
           <img src={infoIcon} alt="information icon"></img>
         </button>
       </div>
