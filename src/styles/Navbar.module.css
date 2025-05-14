@@ -1,42 +1,42 @@
 .mainContainer {
-  max-width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 5px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
 }
 
 .mainContainer > h2 {
-  letter-spacing: 0.25px;
-  cursor: pointer;
+    letter-spacing: 0.25px;
+    cursor: pointer;
 }
 
 .mainContainer > h2:hover {
-  background-color: #fc702e;
-  text-decoration: underline;
+    background-color: #fc702e;
+    text-decoration: underline;
 }
 
 .buttonHolder {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
 .buttonHolder > button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .buttonHolder > button:hover {
-  background-color: #fc702e;
+    background-color: #fc702e;
 }
 
 .buttonHolder > button > img {
-  height: 35px;
-  width: 35px;
+    height: 35px;
+    width: 35px;
 }

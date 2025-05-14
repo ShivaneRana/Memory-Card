@@ -6,11 +6,11 @@ import App from "./App.jsx";
 
 // Initialize Lenis
 const lenis = new Lenis({
-  autoRaf: true,
+    autoRaf: true,
 });
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+    <StrictMode>
+        <App />
+    </StrictMode>,
 );

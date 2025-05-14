@@ -1,18 +1,18 @@
 .mainContainer {
-  max-width: 100%;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mainContainer > p {
-  cursor: default;
+    cursor: default;
 }
 
 .mainContainer > p > span:hover {
-  cursor: pointer;
-  background-color: #fc702e;
-  text-decoration: underline;
+    cursor: pointer;
+    background-color: #fc702e;
+    text-decoration: underline;
 }
