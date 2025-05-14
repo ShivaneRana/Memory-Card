@@ -11,6 +11,10 @@
   cursor: pointer;
 }
 
+.mainContainer > h1:hover{
+    background-color: #fc702e;
+}
+
 .buttonHolder {
   display: flex;
   justify-content: center;
