@@ -1,6 +1,18 @@
 .mainContainer {
+  position: absolute;
+  bottom: 0;
+  min-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
+}
+
+.mainContainer > p{
+    cursor: default;
+}
+
+.mainContainer > p > span:hover{
+    cursor: pointer;
+    background-color: #FC702E;
+    text-decoration: underline;
 }
