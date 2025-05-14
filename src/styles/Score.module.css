@@ -1,20 +1,20 @@
-.mainContainer{
-    min-width:100vw;
-    min-height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+.mainContainer {
+  min-width: 100vw;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
-.mainContainer > h3{
-    cursor: pointer;
+.mainContainer > h3 {
+  cursor: pointer;
 }
 
-.mainContainer > h3:hover{
-    text-decoration: underline;
+.mainContainer > h3:hover {
+  text-decoration: underline;
 }
 
-.mainContainer > h3 > span:hover{
-    background-color: #FC702E;
+.mainContainer > h3 > span:hover {
+  background-color: #fc702e;
 }
