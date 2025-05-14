@@ -4,6 +4,7 @@ import style from "./App.module.css";
 import Navbar from "./components/Navbar.jsx";
 import Score from "./components/Score.jsx";
 import Footer from "./components/Footer.jsx";
+import Content from "./components/Content.jsx";
 
 export const mainContext = createContext();
 
@@ -42,6 +43,7 @@ function MainContainer() {
       <div className={style.mainContainer}>
         <Navbar></Navbar>
         <Score></Score>
+        <Content></Content>
         <Footer></Footer>
       </div>
     </mainContext.Provider>
