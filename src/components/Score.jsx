@@ -2,13 +2,10 @@ import style from "../styles/Score.module.css";
 import { mainContext } from "../App.jsx";
 import { useContext } from "react";
 
-function Score(){
-    const context = useContext(mainContext);
+function Score() {
+  const context = useContext(mainContext);
 
-    return(
-        <>
-        </>
-    )
+  return <></>;
 }
 
 export default Score;

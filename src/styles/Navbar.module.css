@@ -11,8 +11,8 @@
   cursor: pointer;
 }
 
-.mainContainer > h1:hover{
-    background-color: #fc702e;
+.mainContainer > h1:hover {
+  background-color: #fc702e;
 }
 
 .buttonHolder {
