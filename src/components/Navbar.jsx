@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <div className={style.mainContainer}>
-      <h1>Memory Card</h1>
+      <h2>Memory Card</h2>
       <div className={style.buttonHolder}>
         <button
           onClick={() => {

@@ -6,12 +6,12 @@
   margin: 5px;
 }
 
-.mainContainer > h1 {
+.mainContainer > h2 {
   letter-spacing: 0.25px;
   cursor: pointer;
 }
 
-.mainContainer > h1:hover {
+.mainContainer > h2:hover {
   background-color: #fc702e;
 }
 
