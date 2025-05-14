@@ -3,6 +3,7 @@ import { useImmer } from "use-immer";
 import style from "./App.module.css";
 import Navbar from "./components/Navbar.jsx";
 import Score from "./components/Score.jsx";
+import Footer from "./components/Footer.jsx";
 
 export const mainContext = createContext();
 
@@ -41,6 +42,7 @@ function MainContainer() {
       <div className={style.mainContainer}>
         <Navbar></Navbar>
         <Score></Score>
+        <Footer></Footer>
       </div>
     </mainContext.Provider>
   );
