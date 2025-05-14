@@ -12,7 +12,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "pwrite": "prettier . --write",
-    "pcheck": "prettier . --check"
+    "pcheck": "prettier . --check",
+    "ppush":"git add --all && git commit -m 'prettier used'"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
