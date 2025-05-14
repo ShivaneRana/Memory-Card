@@ -13,6 +13,7 @@
 
 .mainContainer > h2:hover {
   background-color: #fc702e;
+  text-decoration: underline;
 }
 
 .buttonHolder {
