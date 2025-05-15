@@ -6,68 +6,68 @@
     align-items: center;
 }
 
-.content{
+.content {
     width: 90%;
     max-height: 90%;
     display: grid;
-    grid-template-rows: repeat(2,250px);
-    grid-template-columns: repeat(4,250px);
+    grid-template-rows: repeat(2, 250px);
+    grid-template-columns: repeat(4, 250px);
     justify-content: center;
     align-items: center;
     column-gap: 30px;
     row-gap: 20px;
 }
 
-.content > div{
+.content > div {
     width: 250px;
     height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F8DC3C;
+    background-color: #f8dc3c;
     border-radius: 10px;
     outline: 1px solid black;
 }
 
-.content > div > img{
+.content > div > img {
     object-position: center;
-    object-fit:fill;
+    object-fit: fill;
     width: 90%;
     height: 90%;
 }
 
-@media screen and (max-width:1100px){
-   .content > div{
-    width: 200px;
-    height: 200px;
-   } 
+@media screen and (max-width: 1100px) {
+    .content > div {
+        width: 200px;
+        height: 200px;
+    }
 
-   .content{
-    grid-template-rows: repeat(2,200px);
-    grid-template-columns: repeat(4,200px);
-   }
+    .content {
+        grid-template-rows: repeat(2, 200px);
+        grid-template-columns: repeat(4, 200px);
+    }
 }
 
-@media screen and (max-width:900px){
-   .content > div{
-    width: 150px;
-    height: 150px;
-   } 
+@media screen and (max-width: 900px) {
+    .content > div {
+        width: 150px;
+        height: 150px;
+    }
 
-   .content{
-    grid-template-rows: repeat(2,150px);
-    grid-template-columns: repeat(4,150px);
-   }
+    .content {
+        grid-template-rows: repeat(2, 150px);
+        grid-template-columns: repeat(4, 150px);
+    }
 }
 
-@media screen and (max-width:700px){
-   .content > div{
-    width: 150px;
-    height: 150px;
-   } 
+@media screen and (max-width: 700px) {
+    .content > div {
+        width: 150px;
+        height: 150px;
+    }
 
-   .content{
-    grid-template-rows: repeat(4,150px);
-    grid-template-columns: repeat(2,150px);
-   }
+    .content {
+        grid-template-rows: repeat(4, 150px);
+        grid-template-columns: repeat(2, 150px);
+    }
 }
