@@ -10,17 +10,23 @@ import clickSound from "../assets/sound/click.mp3";
 function Navbar() {
     const context = useContext(mainContext);
 
-
     return (
         <div className={style.mainContainer}>
-            <h2 onClick={() => {
-                window.open("https://shivanerana.github.io/Memory-Card/","_blank")
-            }}>Memory Card</h2>
+            <h2
+                onClick={() => {
+                    window.open(
+                        "https://shivanerana.github.io/Memory-Card/",
+                        "_blank",
+                    );
+                }}
+            >
+                Memory Card
+            </h2>
             <div className={style.buttonHolder}>
                 <button
                     onClick={() => {
                         context.toggleSound();
-                        if(context.sound === true){
+                        if (context.sound === true) {
                             const sound = new Audio(clickSound);
                             sound.play();
                         }
@@ -32,20 +38,26 @@ function Navbar() {
                         alt="toggling sound effect icon"
                     ></img>
                 </button>
-                <button onClick={() => {
-                        if(context.sound === true){
+                <button
+                    onClick={() => {
+                        if (context.sound === true) {
                             const sound = new Audio(clickSound);
                             sound.play();
                         }
-                }} title="Reset game">
+                    }}
+                    title="Reset game"
+                >
                     <img src={resetIcon} alt="reset game icon"></img>
                 </button>
-                <button onClick={() => {
-                        if(context.sound === true){
+                <button
+                    onClick={() => {
+                        if (context.sound === true) {
                             const sound = new Audio(clickSound);
                             sound.play();
                         }
-                }} title="Game information">
+                    }}
+                    title="Game information"
+                >
                     <img src={infoIcon} alt="information icon"></img>
                 </button>
             </div>
