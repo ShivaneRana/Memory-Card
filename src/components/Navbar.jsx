@@ -10,9 +10,12 @@ import clickSound from "../assets/sound/click.mp3";
 function Navbar() {
     const context = useContext(mainContext);
 
+
     return (
         <div className={style.mainContainer}>
-            <h2>Memory Card</h2>
+            <h2 onClick={() => {
+                window.open("https://shivanerana.github.io/Memory-Card/","_blank")
+            }}>Memory Card</h2>
             <div className={style.buttonHolder}>
                 <button
                     onClick={() => {
