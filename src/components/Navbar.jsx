@@ -5,6 +5,7 @@ import muteIcon from "../assets/images/mute.svg";
 import nonMuteIcon from "../assets/images/not-mute.svg";
 import resetIcon from "../assets/images/reset.svg";
 import infoIcon from "../assets/images/info.svg";
+import clickSound from "../assets/sound/click.mp3";
 
 function Navbar() {
     const context = useContext(mainContext);
@@ -16,6 +17,10 @@ function Navbar() {
                 <button
                     onClick={() => {
                         context.toggleSound();
+                        if(context.sound === true){
+                            const sound = new Audio(clickSound);
+                            sound.play();
+                        }
                     }}
                     title={context.sound ? "Mute sound" : "Unmute sound"}
                 >
@@ -24,10 +29,20 @@ function Navbar() {
                         alt="toggling sound effect icon"
                     ></img>
                 </button>
-                <button onClick={() => {}} title="Reset game">
+                <button onClick={() => {
+                        if(context.sound === true){
+                            const sound = new Audio(clickSound);
+                            sound.play();
+                        }
+                }} title="Reset game">
                     <img src={resetIcon} alt="reset game icon"></img>
                 </button>
-                <button onClick={() => {}} title="Game information">
+                <button onClick={() => {
+                        if(context.sound === true){
+                            const sound = new Audio(clickSound);
+                            sound.play();
+                        }
+                }} title="Game information">
                     <img src={infoIcon} alt="information icon"></img>
                 </button>
             </div>
