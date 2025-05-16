@@ -41,7 +41,7 @@
 
 .content > div > img {
     object-position: center;
-    object-fit: fill;
+    object-fit: cover;
     width: 90%;
     height: 90%;
 }

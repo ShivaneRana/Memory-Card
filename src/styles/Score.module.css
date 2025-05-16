@@ -23,10 +23,10 @@
     transform: scale(1.2);
 }
 
-.mainContainer > h3:nth-child(1) > span{
+.mainContainer > h3:nth-child(1) > span {
     color: #00fa0a;
 }
 
-.mainContainer > h3:nth-child(2) > span{
+.mainContainer > h3:nth-child(2) > span {
     color: #fcd703;
 }
