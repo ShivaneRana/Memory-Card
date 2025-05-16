@@ -33,7 +33,7 @@
     transition: all 0.25s;
 }
 
-.buttonHolder > button:hover{
+.buttonHolder > button:hover {
     transform: scale(1.2);
 }
 

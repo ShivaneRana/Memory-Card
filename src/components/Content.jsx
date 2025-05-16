@@ -13,20 +13,16 @@ function Content() {
 
 function ImageHolder() {
     const data = useData("charizard");
+    let source;
     if (data) {
-        console.log(data.name);
+        source = data.sprites.back_default;
     }
 
     return (
         <div className={style.content}>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>
+                <img src={source}></img>
+            </div>
         </div>
     );
 }
