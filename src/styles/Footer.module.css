@@ -14,6 +14,5 @@
 
 .mainContainer > p > span:hover {
     cursor: pointer;
-    background-color: #fc702e;
     text-decoration: underline;
 }
