@@ -9,6 +9,4 @@ const lenis = new Lenis({
     autoRaf: true,
 });
 
-createRoot(document.getElementById("root")).render(
-    <App />
-);
+createRoot(document.getElementById("root")).render(<App />);
