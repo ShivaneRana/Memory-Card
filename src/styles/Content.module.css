@@ -40,13 +40,13 @@
     transform: scale(1.1);
 }
 
-.content > button:active{
+.content > button:active {
     transform: none;
     box-shadow: none;
 }
 
 /* this is when data has been fetched */
-.content > button > img{
+.content > button > img {
     object-position: center;
     object-fit: cover;
     width: 90%;
