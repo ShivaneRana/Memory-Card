@@ -18,10 +18,11 @@
     row-gap: 30px;
 }
 
-.content > div {
+.content > button {
     width: 250px;
     height: 250px;
     display: flex;
+    border: none;
     justify-content: center;
     align-items: center;
     background-color: #fafafa;
@@ -35,11 +36,17 @@
     transition: all 0.25s ease;
 }
 
-.content > div:hover {
+.content > button:hover {
     transform: scale(1.1);
 }
 
-.content > div > img {
+.content > button:active{
+    transform: none;
+    box-shadow: none;
+}
+
+/* this is when data has been fetched */
+.content > button > img{
     object-position: center;
     object-fit: cover;
     width: 90%;
@@ -47,7 +54,7 @@
 }
 
 @media screen and (max-width: 1100px) {
-    .content > div {
+    .content > button {
         width: 200px;
         height: 200px;
     }
@@ -59,7 +66,7 @@
 }
 
 @media screen and (max-width: 900px) {
-    .content > div {
+    .content > button {
         width: 150px;
         height: 150px;
     }
@@ -71,7 +78,7 @@
 }
 
 @media screen and (max-width: 700px) {
-    .content > div {
+    .content > button {
         width: 150px;
         height: 150px;
     }
