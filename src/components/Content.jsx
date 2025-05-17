@@ -38,7 +38,9 @@ function Images() {
             {data === null ? (
                 <p>Loading...</p>
             ) : (
-                <img src={data.sprites.front_default}></img>
+
+                <img src={data.sprites.other["official-artwork"].front_default}></img>
+                
             )}
         </button>
     );
