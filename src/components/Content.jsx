@@ -26,7 +26,7 @@ function ImageHolder() {
 }
 
 function Images() {
-    const randomNumber = Math.floor(Math.random()*150);
+    const randomNumber = Math.floor(Math.random() * 150);
     const context = useContext(mainContext);
     let data = useData(randomNumber);
 
