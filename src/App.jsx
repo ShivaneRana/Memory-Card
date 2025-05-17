@@ -16,6 +16,7 @@ function App() {
 
 function MainContainer() {
     const [sound, setSound] = useState(true);
+    const [displayInfo,setDisplayInfo] = useState(false);
     const [currentScore, setCurrentScore] = useState(0);
     const [topScore, setTopScore] = useState(0);
     const [pokemonList, updatePokemonList] = useImmer(new Set());
@@ -38,6 +39,10 @@ function MainContainer() {
         });
     }
 
+    function toggleDisplayInfo(){
+        setDisplayInfo(!displayInfo);
+    }
+
     function clearPokemonList() {
         updatePokemonList((draft) => {
             // ensure that draft clear each time
@@ -54,6 +59,8 @@ function MainContainer() {
                 currentScore,
                 pokemonList,
                 topScore,
+                displayInfo,
+                toggleDisplayInfo,
                 toggleSound,
                 updateCurrentScore,
                 updateTopScore,
