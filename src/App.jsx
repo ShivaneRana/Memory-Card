@@ -16,7 +16,7 @@ function App() {
 
 function MainContainer() {
     const [sound, setSound] = useState(true);
-    const [displayInfo,setDisplayInfo] = useState(false);
+    const [displayInfo, setDisplayInfo] = useState(false);
     const [currentScore, setCurrentScore] = useState(0);
     const [topScore, setTopScore] = useState(0);
     const [pokemonList, updatePokemonList] = useImmer(new Set());
@@ -39,7 +39,7 @@ function MainContainer() {
         });
     }
 
-    function toggleDisplayInfo(){
+    function toggleDisplayInfo() {
         setDisplayInfo(!displayInfo);
     }
 

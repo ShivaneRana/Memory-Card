@@ -63,15 +63,26 @@ function Navbar() {
                             const sound = new Audio(clickSound);
                             sound.play();
                         }
-                        
+
                         context.toggleDisplayInfo();
                     }}
-                    title={context.displayInfo ? "Hide information" : "Show information"}
+                    title={
+                        context.displayInfo
+                            ? "Hide information"
+                            : "Show information"
+                    }
                 >
-                    <img src={context.displayInfo ? closeIcon : infoIcon} alt="information icon"></img>
+                    <img
+                        src={context.displayInfo ? closeIcon : infoIcon}
+                        alt="information icon"
+                    ></img>
                 </button>
             </div>
-            {context.displayInfo && <div className={style.infoBox}><p>Don't click the same card twice!</p></div>}
+            {context.displayInfo && (
+                <div className={style.infoBox}>
+                    <p>Don't click the same card twice!</p>
+                </div>
+            )}
         </div>
     );
 }
