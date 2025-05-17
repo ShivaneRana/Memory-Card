@@ -1,9 +1,6 @@
 import style from "../styles/Content.module.css";
 import { mainContext } from "../App.jsx";
-import { useImmer } from "use-immer";
-import { createContext, useContext, useEffect, useState } from "react";
-import loadingIcon from "../assets/images/loading.svg";
-import { useSyncExternalStore } from "react";
+import { useContext, useEffect, useState } from "react";
 
 function Content() {
     return (
@@ -29,9 +26,9 @@ function ImageHolder() {
 }
 
 function Images() {
-    const randomNumber = Math.floor(Math.random() * 500);
+    const randomNumber = Math.floor(Math.random()*150);
     const context = useContext(mainContext);
-    const data = useData(randomNumber);
+    let data = useData(randomNumber);
 
     return (
         <button
