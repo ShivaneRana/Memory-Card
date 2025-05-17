@@ -1,5 +1,5 @@
 import { useState, createContext } from "react";
-import { enableMapSet } from 'immer';
+import { enableMapSet } from "immer";
 import { useImmer } from "use-immer";
 import style from "./App.module.css";
 import Navbar from "./components/Navbar.jsx";
@@ -18,7 +18,7 @@ function MainContainer() {
     const [sound, setSound] = useState(true);
     const [currentScore, setCurrentScore] = useState(0);
     const [topScore, setTopScore] = useState(0);
-    const [pokemonList,updatePokemonList] = useImmer(new Set());
+    const [pokemonList, updatePokemonList] = useImmer(new Set());
 
     function toggleSound() {
         setSound(!sound);
@@ -32,10 +32,10 @@ function MainContainer() {
         setTopScore(currentScore);
     }
 
-    function addPokemon(name){
-        updatePokemonList(draft => {
+    function addPokemon(name) {
+        updatePokemonList((draft) => {
             draft.add(name);
-        })
+        });
     }
 
     return (

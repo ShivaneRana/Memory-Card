@@ -35,19 +35,19 @@ function Images() {
 
     return (
         <button
-        title={data && data.name}
-        onClick={() => {
-            if(data !== null){
-                context.addPokemon(data.name);
-            }
-        }}
+            title={data && data.name}
+            onClick={() => {
+                if (data !== null) {
+                    context.addPokemon(data.name);
+                }
+            }}
         >
             {data === null ? (
                 <p>Loading...</p>
             ) : (
-
-                <img src={data.sprites.other["official-artwork"].front_default}></img>
-                
+                <img
+                    src={data.sprites.other["official-artwork"].front_default}
+                ></img>
             )}
         </button>
     );
