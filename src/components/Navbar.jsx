@@ -5,6 +5,7 @@ import muteIcon from "../assets/images/mute.svg";
 import nonMuteIcon from "../assets/images/not-mute.svg";
 import resetIcon from "../assets/images/reset.svg";
 import infoIcon from "../assets/images/info.svg";
+import closeIcon from "../assets/images/close.svg";
 import clickSound from "../assets/sound/click.mp3";
 
 function Navbar() {
@@ -35,7 +36,7 @@ function Navbar() {
                     title={context.sound ? "Mute sound" : "Unmute sound"}
                 >
                     <img
-                        src={context.sound ? nonMuteIcon : muteIcon}
+                        src={context.sound ? muteIcon : nonMuteIcon}
                         alt="toggling sound effect icon"
                     ></img>
                 </button>
@@ -62,12 +63,15 @@ function Navbar() {
                             const sound = new Audio(clickSound);
                             sound.play();
                         }
+                        
+                        context.toggleDisplayInfo();
                     }}
-                    title="Game information"
+                    title={context.displayInfo ? "Hide information" : "Show information"}
                 >
-                    <img src={infoIcon} alt="information icon"></img>
+                    <img src={context.displayInfo ? closeIcon : infoIcon} alt="information icon"></img>
                 </button>
             </div>
+            {context.displayInfo && <div className={style.infoBox}><p>Don't click the same card twice!</p></div>}
         </div>
     );
 }
