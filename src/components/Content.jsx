@@ -65,7 +65,11 @@ function useData(id) {
         if (!ignore) {
             fetch(`https://pokeapi.co/api/v2/pokemon/${id}`, { mode: "cors" })
                 .then((result) => result.json())
-                .then((finalResult) => setData(finalResult));
+                .then((finalResult) => setData(finalResult))
+                .catch((err) => {
+                    console.log(`error ${err.message} has occurred`);
+                    setData(null);
+                });
         }
 
         return () => (ignore = true);
