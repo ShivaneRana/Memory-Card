@@ -1,6 +1,7 @@
 import style from "../styles/Content.module.css";
 import { mainContext } from "../App.jsx";
 import { useContext, useEffect, useState } from "react";
+import clickSound from "../assets/sound/click.mp3";
 
 function Content() {
     return (
@@ -34,6 +35,11 @@ function Images() {
         <button
             title={data && data.name}
             onClick={() => {
+                if (context.sound === true) {
+                    const sound = new Audio(clickSound);
+                    sound.play();
+                }
+
                 if (data !== null) {
                     context.addPokemon(data.name);
                 }
