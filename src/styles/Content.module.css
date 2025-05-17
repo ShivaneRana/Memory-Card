@@ -48,7 +48,7 @@
 /* this is when data has been fetched */
 .content > button > img {
     object-position: center;
-    object-fit: cover;
+    object-fit: scale-down;
     width: 90%;
     height: 90%;
 }
