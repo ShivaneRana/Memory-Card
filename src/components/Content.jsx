@@ -1,9 +1,11 @@
 import style from "../styles/Content.module.css";
 import { mainContext } from "../App.jsx";
-import { useContext, useEffect, useState } from "react";
+import {useImmer} from "use-immer";
+import { createContext,useContext, useEffect, useState } from "react";
+import loadingIcon from "../assets/images/loading.svg";
+import { useSyncExternalStore } from "react";
 
 function Content() {
-    const context = useContext(mainContext);
     return (
         <div className={style.mainContainer}>
             <ImageHolder></ImageHolder>
@@ -12,95 +14,43 @@ function Content() {
 }
 
 function ImageHolder() {
-    const pokemonNames = [
-        "Bulbasaur",
-        "Ivysaur",
-        "Venusaur",
-        "Charmander",
-        "Charmeleon",
-        "Charizard",
-        "Squirtle",
-        "Wartortle",
-        "Blastoise",
-        "Caterpie",
-        "Metapod",
-        "Butterfree",
-        "Weedle",
-        "Kakuna",
-        "Beedrill",
-        "Pidgey",
-        "Pidgeotto",
-        "Pidgeot",
-        "Rattata",
-        "Raticate",
-        "Spearow",
-        "Fearow",
-        "Ekans",
-        "Arbok",
-        "Pikachu",
-        "Raichu",
-        "Sandshrew",
-        "Sandslash",
-        "Nidoran♀",
-        "Nidorina",
-        "Nidoqueen",
-        "Nidoran♂",
-        "Nidorino",
-        "Nidoking",
-        "Clefairy",
-        "Clefable",
-        "Vulpix",
-        "Ninetales",
-        "Jigglypuff",
-        "Wigglytuff",
-        "Zubat",
-        "Golbat",
-        "Oddish",
-        "Gloom",
-        "Vileplume",
-        "Paras",
-        "Parasect",
-        "Venonat",
-        "Venomoth",
-        "Diglett",
-    ];
-
-    const data = useData("charizard");
-    let source;
-    if (data) {
-        source = data.sprites.back_default;
-    }
-
     return (
         <div className={style.content}>
-            <div>
-                <img src={source}></img>
-            </div>
+            <Images></Images>
+            <Images></Images>
+            <Images></Images>
+            <Images></Images>
+            <Images></Images>
+            <Images></Images>
+            <Images></Images>
+            <Images></Images>
         </div>
     );
 }
 
-function useData(name) {
-    const [data, setData] = useState(null);
+function Images(){
+    const [selected,setSelected] = useState(0);
+    const randomNumber = Math.floor(Math.random()*500);
+    const data = useData(randomNumber)
+
+    return(
+        <button title={data && data.name}>
+            {data === null ? <p>Loading...</p> : <img src={data.sprites.front_default}></img>}
+        </button>
+    )
+}
+
+function useData(id) {
+    const [data,setData] = useState(null);
+
     useEffect(() => {
         let ignore = false;
-
-        if (!ignore) {
-            fetch(`https://pokeapi.co/api/v2/pokemon/${name}`, {
-                mode: "cors",
-            })
-                .then((data) => {
-                    return data.json();
-                })
-                .then((result) => {
-                    setData(result);
-                });
+        if(!ignore){
+            fetch(`https://pokeapi.co/api/v2/pokemon/${id}`,{mode:"cors"}).then(result => result.json()).then(finalResult => setData(finalResult));
         }
 
-        return () => {
-            ignore = true;
-        };
-    }, [name]);
+        return () => ignore = true;
+    },[])
 
     return data;
 }
