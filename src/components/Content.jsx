@@ -29,12 +29,19 @@ function ImageHolder() {
 }
 
 function Images() {
-    const [selected, setSelected] = useState(0);
     const randomNumber = Math.floor(Math.random() * 500);
+    const context = useContext(mainContext);
     const data = useData(randomNumber);
 
     return (
-        <button title={data && data.name}>
+        <button
+        title={data && data.name}
+        onClick={() => {
+            if(data !== null){
+                context.addPokemon(data.name);
+            }
+        }}
+        >
             {data === null ? (
                 <p>Loading...</p>
             ) : (
@@ -48,6 +55,7 @@ function Images() {
 
 function useData(id) {
     const [data, setData] = useState(null);
+    const context = useContext(mainContext);
 
     useEffect(() => {
         let ignore = false;
@@ -58,7 +66,7 @@ function useData(id) {
         }
 
         return () => (ignore = true);
-    }, []);
+    }, [context.pokemonList]);
 
     return data;
 }
