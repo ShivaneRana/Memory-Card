@@ -38,6 +38,15 @@ function MainContainer() {
         });
     }
 
+    function clearPokemonList(){
+        updatePokemonList((draft) => {
+            // ensure that draft clear each time
+            // even when the draft is already empty
+            draft.add("temp");
+            draft.clear();
+        })
+    }
+
     return (
         <mainContext.Provider
             value={{
@@ -49,6 +58,7 @@ function MainContainer() {
                 updateCurrentScore,
                 updateTopScore,
                 addPokemon,
+                clearPokemonList,
             }}
         >
             <div className={style.mainContainer}>
