@@ -23,10 +23,11 @@ function Navbar() {
                 Memory Card
             </h2>
             <div className={style.buttonHolder}>
+                {/* sound button */}
                 <button
                     onClick={() => {
                         context.toggleSound();
-                        if (context.sound === true) {
+                        if (context.sound === false) {
                             const sound = new Audio(clickSound);
                             sound.play();
                         }
@@ -38,17 +39,23 @@ function Navbar() {
                         alt="toggling sound effect icon"
                     ></img>
                 </button>
+
+                {/* reset button */}
                 <button
                     onClick={() => {
                         if (context.sound === true) {
                             const sound = new Audio(clickSound);
                             sound.play();
                         }
+
+                        context.clearPokemonList();
                     }}
                     title="Reset game"
                 >
                     <img src={resetIcon} alt="reset game icon"></img>
                 </button>
+
+                {/* Game information button */}
                 <button
                     onClick={() => {
                         if (context.sound === true) {
