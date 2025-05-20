@@ -27,7 +27,7 @@ function ImageHolder() {
 }
 
 function Images() {
-    const randomNumber = Math.floor(Math.random() * 150);
+    const randomNumber = Math.floor(Math.random() * 900);
     const context = useContext(mainContext);
     let data = useData(randomNumber);
 
@@ -42,6 +42,10 @@ function Images() {
 
                 if (data !== null) {
                     context.addPokemon(data.name);
+                    console.log(data);
+                }else{
+                    console.log("this one does not work")
+                    console.log(data);
                 }
             }}
         >
@@ -67,7 +71,7 @@ function useData(id) {
                 .then((result) => result.json())
                 .then((finalResult) => setData(finalResult))
                 .catch((err) => {
-                    console.log(`error ${err.message} has occurred`);
+                    console.log("Error has occured: "+err.message);
                     setData(null);
                 });
         }
