@@ -42,14 +42,14 @@ function Images() {
 
                 if (data !== null) {
                     // if the pokemonList does not have the name already.
-                    if(!context.pokemonList.has(data.name)){
+                    if (!context.pokemonList.has(data.name)) {
                         context.addPokemon(data.name);
                         context.updateCurrentScore();
                     }
 
-                    // if the name already exists then 
-                    if(context.pokemonList.has(data.name)){
-                        if(context.currentScore > context.topScore){
+                    // if the name already exists then
+                    if (context.pokemonList.has(data.name)) {
+                        if (context.currentScore > context.topScore) {
                             context.updateTopScore();
                         }
 
@@ -81,7 +81,7 @@ function useData(id) {
                 .then((result) => result.json())
                 .then((finalResult) => setData(finalResult))
                 .catch((err) => {
-                    console.log("Error has occured: "+err.message);
+                    console.log("Error has occured: " + err.message);
                     setData(null);
                 });
         }

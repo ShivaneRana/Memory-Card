@@ -29,7 +29,7 @@ function MainContainer() {
         setCurrentScore(currentScore + 1);
     }
 
-    function clearCurrentScore(){
+    function clearCurrentScore() {
         setCurrentScore(0);
     }
 
