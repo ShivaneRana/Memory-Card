@@ -27,7 +27,7 @@ function ImageHolder() {
 }
 
 function Images() {
-    const randomNumber = Math.floor(Math.random() * 900);
+    const randomNumber = Math.floor(Math.random() * 10);
     const context = useContext(mainContext);
     let data = useData(randomNumber);
 
@@ -41,11 +41,21 @@ function Images() {
                 }
 
                 if (data !== null) {
-                    context.addPokemon(data.name);
-                    console.log(data);
-                }else{
-                    console.log("this one does not work")
-                    console.log(data);
+                    // if the pokemonList does not have the name already.
+                    if(!context.pokemonList.has(data.name)){
+                        context.addPokemon(data.name);
+                        context.updateCurrentScore();
+                    }
+
+                    // if the name already exists then 
+                    if(context.pokemonList.has(data.name)){
+                        if(context.currentScore > context.topScore){
+                            context.updateTopScore();
+                        }
+
+                        context.clearPokemonList();
+                        context.clearCurrentScore();
+                    }
                 }
             }}
         >
