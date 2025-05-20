@@ -50,6 +50,7 @@ function Navbar() {
                         }
 
                         context.clearPokemonList();
+                        context.clearCurrentScore();
                     }}
                     title="Reset game"
                 >
