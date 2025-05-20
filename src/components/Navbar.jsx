@@ -51,6 +51,7 @@ function Navbar() {
 
                         context.clearPokemonList();
                         context.clearCurrentScore();
+                        context.upperLimit.current = 10;
                     }}
                     title="Reset game"
                 >
