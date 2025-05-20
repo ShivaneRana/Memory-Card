@@ -27,8 +27,10 @@ function ImageHolder() {
 }
 
 function Images() {
-    const randomNumber = Math.floor(Math.random() * 900);
     const context = useContext(mainContext);
+    const min = 1;
+    const max = context.upperLimit.current;
+    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
     let data = useData(randomNumber);
 
     return (
