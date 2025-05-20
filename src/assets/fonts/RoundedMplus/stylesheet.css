@@ -1,69 +1,9 @@
 @font-face {
-    font-family: "MplusRegular";
-    src:
-        url("RoundedMplus1c-Regular.woff2") format("woff2"),
-        url("RoundedMplus1c-Regular.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "MplusMedium";
     src:
         url("RoundedMplus1c-Medium.woff2") format("woff2"),
         url("RoundedMplus1c-Medium.woff") format("woff");
     font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "MplusThin";
-    src:
-        url("RoundedMplus1c-Thin.woff2") format("woff2"),
-        url("RoundedMplus1c-Thin.woff") format("woff");
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "MplusLight";
-    src:
-        url("RoundedMplus1c-Light.woff2") format("woff2"),
-        url("RoundedMplus1c-Light.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "MplusExtraBold";
-    src:
-        url("RoundedMplus1c-ExtraBold.woff2") format("woff2"),
-        url("RoundedMplus1c-ExtraBold.woff") format("woff");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "MplusBold";
-    src:
-        url("RoundedMplus1c-Bold.woff2") format("woff2"),
-        url("RoundedMplus1c-Bold.woff") format("woff");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "MplusBlack";
-    src:
-        url("RoundedMplus1c-Black.woff2") format("woff2"),
-        url("RoundedMplus1c-Black.woff") format("woff");
-    font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
