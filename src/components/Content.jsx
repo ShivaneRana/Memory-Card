@@ -45,9 +45,9 @@ function Images() {
         console.warn("All numbers have been used, optional fallback");
         used.clear();
     } else {
-    do {
-        randomNumber = Math.floor(Math.random() * range) + min;
-    } while (used.has(randomNumber));
+        do {
+            randomNumber = Math.floor(Math.random() * range) + min;
+        } while (used.has(randomNumber));
     }
 
     used.add(randomNumber);
