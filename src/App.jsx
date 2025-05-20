@@ -21,6 +21,7 @@ function MainContainer() {
     const [topScore, setTopScore] = useState(0);
     const [pokemonList, updatePokemonList] = useImmer(new Set());
     const upperLimit = useRef(10);
+    const repeatList = useRef(new Set());
 
     function toggleSound() {
         setSound(!sound);
@@ -73,6 +74,7 @@ function MainContainer() {
                 topScore,
                 displayInfo,
                 upperLimit,
+                repeatList,
                 clearCurrentScore,
                 toggleDisplayInfo,
                 toggleSound,
