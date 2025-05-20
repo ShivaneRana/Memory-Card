@@ -2,6 +2,7 @@ import style from "../styles/Content.module.css";
 import { mainContext } from "../App.jsx";
 import { useContext, useEffect, useState } from "react";
 import clickSound from "../assets/sound/click.mp3";
+import { createContext } from "react";
 
 function Content() {
     return (
@@ -12,6 +13,10 @@ function Content() {
 }
 
 function ImageHolder() {
+    const context = useContext(mainContext);
+    // clear repeatList every render
+    context.repeatList.current.clear();
+
     return (
         <div className={style.content}>
             <Images></Images>
@@ -30,7 +35,23 @@ function Images() {
     const context = useContext(mainContext);
     const min = 1;
     const max = context.upperLimit.current;
-    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    const used = context.repeatList.current;
+    const range = max - min + 1;
+
+    let randomNumber;
+
+    if (used.size >= range) {
+        // All numbers have been used, optional fallback
+        console.warn("All numbers have been used, optional fallback");
+        used.clear();
+    } else {
+    do {
+        randomNumber = Math.floor(Math.random() * range) + min;
+    } while (used.has(randomNumber));
+    }
+
+    used.add(randomNumber);
+
     let data = useData(randomNumber);
 
     return (
@@ -57,6 +78,7 @@ function Images() {
 
                         context.clearPokemonList();
                         context.clearCurrentScore();
+                        context.upperLimit.current = 10;
                     }
                 }
             }}
