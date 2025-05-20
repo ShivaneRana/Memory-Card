@@ -29,6 +29,10 @@ function MainContainer() {
         setCurrentScore(currentScore + 1);
     }
 
+    function clearCurrentScore(){
+        setCurrentScore(0);
+    }
+
     function updateTopScore() {
         setTopScore(currentScore);
     }
@@ -60,6 +64,7 @@ function MainContainer() {
                 pokemonList,
                 topScore,
                 displayInfo,
+                clearCurrentScore,
                 toggleDisplayInfo,
                 toggleSound,
                 updateCurrentScore,
