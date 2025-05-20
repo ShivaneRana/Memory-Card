@@ -20,14 +20,14 @@ function MainContainer() {
     const [currentScore, setCurrentScore] = useState(0);
     const [topScore, setTopScore] = useState(0);
     const [pokemonList, updatePokemonList] = useImmer(new Set());
-    const upperLimit = useRef(10)
+    const upperLimit = useRef(10);
 
     function toggleSound() {
         setSound(!sound);
     }
 
-    function updateUpperLimit(){
-        upperLimit.current = upperLimit.current*2;
+    function updateUpperLimit() {
+        upperLimit.current = upperLimit.current * 2;
     }
 
     function updateCurrentScore() {
@@ -43,7 +43,7 @@ function MainContainer() {
     }
 
     function addPokemon(name) {
-        if(pokemonList.size+1 >= upperLimit.current*0.5){
+        if (pokemonList.size + 1 >= upperLimit.current * 0.5) {
             updateUpperLimit();
         }
         updatePokemonList((draft) => {
