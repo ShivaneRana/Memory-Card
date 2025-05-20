@@ -27,14 +27,14 @@ function ImageHolder() {
 }
 
 function Images() {
-    const randomNumber = Math.floor(Math.random() * 10);
+    const randomNumber = Math.floor(Math.random() * 900);
     const context = useContext(mainContext);
     let data = useData(randomNumber);
 
     return (
         <button
             title={data && data.name}
-            onClick={() => {
+            onClick={(e) => {
                 if (context.sound === true) {
                     const sound = new Audio(clickSound);
                     sound.play();
@@ -81,8 +81,7 @@ function useData(id) {
                 .then((result) => result.json())
                 .then((finalResult) => setData(finalResult))
                 .catch((err) => {
-                    console.log("Error has occured: " + err.message);
-                    setData(null);
+                    console.log(`Error occured: ${err.message}`);
                 });
         }
 
