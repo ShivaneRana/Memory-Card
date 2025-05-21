@@ -86,6 +86,7 @@ function Images() {
                 <p>Loading...</p>
             ) : (
                 <img
+                    alt={`Pokemon image`}
                     src={data.sprites.other["official-artwork"].front_default}
                 ></img>
             )}
