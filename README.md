@@ -2,11 +2,6 @@
 
 **Memory-Card** is a game for testing memory by clicking on unique Pokémon cards without repeating any selection. If you click the same card twice, the game resets.
 
-## Screenshot
-![Pc Preview](/src/assets/images/pc.png) ![Mobile Preview](/src/assets/images/mobile.png)
-
----
-
 ## Features
 
 - **Reset Functionality** – Restart the game at any time.
@@ -15,7 +10,15 @@
 - **Memory Challenge** – Cards reshuffle after each correct click.
 - **Score Tracker** – Tracks your current and best scores in real time.
 
----
+## Screenshots
+
+### Mobile Version
+
+![Mobile Version](./src/asset/images/mobile.png)
+
+### PC Versionf
+
+![PC Version](./src/asset/images/pc.png)
 
 ## Tech Stack
 
