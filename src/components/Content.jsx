@@ -2,7 +2,6 @@ import style from "../styles/Content.module.css";
 import { mainContext } from "../App.jsx";
 import { useContext, useEffect, useState } from "react";
 import clickSound from "../assets/sound/click.mp3";
-import { createContext } from "react";
 
 function Content() {
     return (
