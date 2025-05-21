@@ -16,7 +16,7 @@
 
 ![Mobile Version](./src/asset/images/mobile.png)
 
-### PC Versionf
+### PC Version
 
 ![PC Version](./src/asset/images/pc.png)
 
