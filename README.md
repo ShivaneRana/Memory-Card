@@ -14,11 +14,11 @@
 
 ### Mobile Version
 
-![Mobile Version](./src/asset/images/mobile.png)
+![Mobile Version](./src/assets/images/mobile.png)
 
 ### PC Version
 
-![PC Version](./src/asset/images/pc.png)
+![PC Version](./src/assets/images/pc.png)
 
 ## Tech Stack
 
