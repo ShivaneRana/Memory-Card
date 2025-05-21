@@ -1,8 +1,7 @@
 .mainContainer {
+    margin-top: 10px;
     min-width: 100%;
     max-width: 100%;
-    position: absolute;
-    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,6 +9,7 @@
 
 .mainContainer > p {
     cursor: default;
+    text-align: center;
 }
 
 .mainContainer > p > span:hover {
