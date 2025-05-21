@@ -12,9 +12,11 @@
 
 ## Screenshots
 
-![Mobile Version](./src/assets/images/mobile.png)
-
+## Desktop~
 ![PC Version](./src/assets/images/pc.png)
+
+## Mobile~
+![Mobile Version](./src/assets/images/mobile.png)
 
 ## Tech Stack
 
