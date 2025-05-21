@@ -10,27 +10,9 @@
 - **Memory Challenge** – Cards reshuffle after each correct click.
 - **Score Tracker** – Tracks your current and best scores in real time.
 
-<div style="display: flex; justify-content: space-around; align-items: flex-start; gap: 20px;">
-
-  <div style="text-align: center;">
-    <h3>Mobile Version</h3>
-    <img src="./src/assets/images/mobile.png" alt="Mobile Version" width="300" />
-  </div>
-
-  <div style="text-align: center;">
-    <h3>PC Version</h3>
-    <img src="./src/assets/images/pc.png" alt="PC Version" width="300" />
-  </div>
-
-</div>
-
 ## Screenshots
 
-## Mobile Version
-
 ![Mobile Version](./src/assets/images/mobile.png)
-
-### PC Version
 
 ![PC Version](./src/assets/images/pc.png)
 
